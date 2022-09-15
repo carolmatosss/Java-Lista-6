@@ -1,16 +1,17 @@
 package ExercicioAnimais;
 
-public class AnimaisGeral {
+public abstract class AnimaisGeral {
 	//Atributos
 	private String nome;
 	private int idade;
-	private int ameaca;
 	//Construtor - Parâmetros
 	
-	public AnimaisGeral (String nome, int idade, int ameaca) {
+	
+	
+	public AnimaisGeral (String nome, int idade) {
 		this.setNome(nome);
 		this.setIdade(idade);
-		this.setAmeaca (ameaca);
+		
 	}
 
 	public String getNome() {
@@ -29,44 +30,12 @@ public class AnimaisGeral {
 		this.idade = idade;
 	}
 	
-  public int getAmeaca() {
-		return ameaca;
-	}
 
-	public void setAmeaca(int ameaca) {
-		this.ameaca = ameaca;
-	}
-
-protected String som() {
-	  String somAnimal;
+  abstract public void som();
+  
+  abstract public void atitude();
 	  
-	  switch (ameaca) {
-	  case 1:
-		  somAnimal = ("latir");
-	  break;
-	  case 2:
-		  somAnimal = ("relinchar");
-	  break;
-	  case 3:
-		  somAnimal = ("grunhir");
-	  break;
-	  default:
-		  somAnimal = ("Inválido");
-	 
-	  }
-	  return somAnimal;
-	  
-  }
   
-  public String  correr () {
-	  String atitude;
-	  if (ameaca==1 || ameaca ==2) {
-		atitude = ("corre");
-	  }else {
-		atitude = ("Opção inválida ao animal");
-	  }
-	  return atitude;
-  }
-  
-  
+ 
+ 
 }

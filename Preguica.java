@@ -5,8 +5,8 @@ public class Preguica extends AnimaisGeral{
 	private String zoologico;
 
 	
-	Preguica (String nome, int idade, int ameaca,  String zoologico){
-	super (nome, idade,ameaca);
+	Preguica (String nome, int idade,  String zoologico){
+	super (nome, idade);
 	this.zoologico = zoologico;
 	
 	}
@@ -25,26 +25,25 @@ public class Preguica extends AnimaisGeral{
 
 	public void pregui () {
 		
-	
-    String[]  lista = new String [7];
-    System.out.println("O nome desta preguiça é: "+getNome()+", de idade: "+getIdade()+" anos,  pertencente ao zoológico "+zoologico+", quando se sente ameaçada ela vai "+this.som()+ "mas ela costuma ser sempre bem ");
-   
-   
-    
-   System.out.println( lista [0]= ("D..."));
-   System.out.println( lista [1]= ("E..."));
-   System.out.println( lista [2]= ("V..."));
-   System.out.println( lista [3]= ("A..."));
-   System.out.println( lista [4]= ("G..."));
-   System.out.println( lista [5]= ("A..."));
-   System.out.println( lista [6]= ("R..."));
-    
-  
-   
+    System.out.println("O nome desta preguiça é: "+getNome()+", de idade: "+getIdade()+" anos,  pertencente ao zoológico "+zoologico);
 	}
+    @Override
+	public void som() {
 
+		String sonoro= "Grunhi";
+		System.out.println("Este animal: "+sonoro);
 
+	}
+	@Override
+	public void atitude() {
+		String acao = "Anda";
+		System.out.println("Este animal: "+acao);
+	}
+   
+    
+ 
 	 
+
 	 
 	
 			
